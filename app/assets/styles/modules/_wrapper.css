@@ -10,6 +10,25 @@
     max-width: 61rem;
   }
 
+  &--no-padding-until-medium {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+
+    @mixin atMedium {
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+    }
+  }
+  &--no-padding-until-large {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+
+    @mixin atLarge {
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+    }
+  }
+
   .wrapper {
     padding-left: 0;
     padding-right: 0;
