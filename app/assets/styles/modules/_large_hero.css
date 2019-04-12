@@ -13,6 +13,11 @@
     left: 0;
     width: 100%;
     text-align: center;
+    padding-top: 0.5rem;
+
+    @mixin atMedium {
+      padding-top: 3.75rem;
+    }
   }
 
   &__title {
