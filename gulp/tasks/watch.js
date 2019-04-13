@@ -18,9 +18,18 @@ gulp.task('watch', () => {
   watch('./app/assets/styles/**/*.css', () => {
     gulp.start('cssInject');
   });
+
+  watch('./app/assets/scripts/**/*.js', () => {
+    gulp.start('scriptRefresh');
+  });
 });
 
 // Gulp CSS reload/injection
 gulp.task('cssInject', ['styles'], () => {
   return gulp.src('./app/temp/styles/styles.css').pipe(browserSync.stream());
+});
+
+// Gulp Javascript refresh
+gulp.task('scriptRefresh', ['scripts'], () => {
+  browserSync.reload();
 });
