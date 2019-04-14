@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader {
   constructor() {
+    this.lasyImage = $('.lazyload');
     this.siteHeader = $('.site-header');
     this.headerTriggerElement = $('.large-hero__subtitle');
     this.createHeaderWaypoint();
@@ -12,6 +13,13 @@ class StickyHeader {
     this.headerLinks = $('.primary-nav a');
     this.createPageSectionWaypoints();
     this.addSmothScrolling();
+    this.refreshWaypoints();
+  }
+
+  refreshWaypoints() {
+    this.lasyImage.on('load', () => {
+      Waypoint.refreshAll();
+    });
   }
 
   addSmothScrolling() {
