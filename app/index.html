@@ -38,9 +38,15 @@
           </div>
           <nav class="primary-nav primary-nav--pull-right">
             <ul>
-              <li><a href="#our-beginning">Our Beginning</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
+              <li>
+                <a href="#our-beginning" id="our-beginning-link"
+                  >Our Beginning</a
+                >
+              </li>
+              <li><a href="#features" id="features-link">Features</a></li>
+              <li>
+                <a href="#testimonials" id="testimonials-link">Testimonials</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -92,7 +98,11 @@
     </div>
 
     <!-- Page Section-->
-    <div class="our-beginning page-section">
+    <div
+      id="our-beginning"
+      class="our-beginning page-section"
+      data-matching-link="#our-beginning-link"
+    >
       <div class="wrapper">
         <h2
           class="headline 
@@ -197,7 +207,11 @@
     </div>
 
     <!-- Features Section-->
-    <div id="features" class="page-section page-section--blue">
+    <div
+      id="features"
+      class="page-section page-section--blue"
+      data-matching-link="#features-link"
+    >
       <div class="wrapper">
         <h2 class="section-title">
           <span class="icon icon--star section-title__icon"></span>
@@ -260,6 +274,7 @@
       class="page-section 
     page-section--no-b-padding-until-large 
     page-section--testimonials"
+      data-matching-link="#testimonials-link"
     >
       <div class="wrapper wrapper--no-padding-until-large">
         <h2 class="section-title section-title--blue">
